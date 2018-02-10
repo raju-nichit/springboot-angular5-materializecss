@@ -1,0 +1,72 @@
+<div class="row">
+  <div class="section"></div>
+  <div class="section"></div>
+  <div class="col s12 m8 offset-m2">
+    <div class="card" style="background-color: #F5F5F5">
+      <div class="card-content">
+        <span class="card-title">Sign up</span>
+        <div class="row">
+          <div class="section"></div>
+          <div class="section"></div>
+          <div class="section"></div>
+          <form #f="ngForm">
+            <div class="row">
+              <div class="input-field col s4 m5 offset-m1">
+                <input placeholder="Placeholder"
+                       id="fist_name"
+                       type="text"
+                       name="firstName"
+                       ngModel
+                       required
+                >
+                <label for="fist_name" data-error="wrong" data-success="right">First Name</label>
+              </div>
+              <div class="input-field col s4 m5 ">
+                <input id="last_name"
+                       type="text"
+                       name="lastName"
+                       ngModel
+                       required
+
+                >
+                <label for="last_name" data-error="wrong" data-success="right">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4 m10 offset-m1 ">
+                <input id="email"
+                       type="email"
+                       name="email"
+                       ngModel
+                       email
+                       required
+                >
+                <label for="email" data-error="wrong" data-success="right">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4 m10 offset-m1 ">
+                <input id="password"
+                       type="password"
+                       name="password"
+                       ngModel
+                       required>
+                <label for="password" data-error="wrong" data-success="right">Password</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class="col s4 m10 offset-m1 ">
+                <a class="waves-effect waves-light btn" (click)="onSignup(f)">Sign up</a>
+                <a class="waves-effect waves-light btn red" (click)="onCancel()">Cancel</a>
+                <a class="waves-effect waves-light btn cyan" (click)="f.reset()">Clear</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
